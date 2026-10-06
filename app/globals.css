@@ -520,3 +520,114 @@ footer a {
 footer a:hover {
   color: #b8860b;
 }
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Navbar */
+  nav {
+    padding: 15px 5%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav div {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  /* Hero */
+  #home {
+    padding: 80px 5%;
+  }
+
+  #home h1 {
+    font-size: 38px;
+  }
+
+  #home p {
+    font-size: 17px;
+  }
+
+  #home > div {
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  #home a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* About */
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  /* Rooms - 2 columns */
+  #rooms > div {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  /* Services - 2 columns */
+  #services > div {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  /* Gallery - 2 columns */
+  #gallery > div {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  /* Contact - 1 column */
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 5% 25px;
+  }
+
+  footer div {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+}
+
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  #home h1 {
+    font-size: 32px;
+  }
+
+  #rooms > div,
+  #services > div,
+  #gallery > div {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .contact-info,
+  .contact-map {
+    padding: 20px;
+  }
+
+  footer div {
+    gap: 10px 15px;
+  }
+}
