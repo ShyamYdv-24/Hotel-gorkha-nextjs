@@ -4,24 +4,16 @@ import { IMAGES } from "../data/images";
 
 export default function Menu() {
   return (
-    <section id="menu" className="section menu">
-      <div className="section-head">
-        <p className="eyebrow">Food &amp; drink</p>
-        <h2>Food Menu</h2>
-        <p className="section-sub">
-          Sample dishes with illustrative prices — example content only.
-        </p>
-      </div>
+    <section id="menu">
+      <h2>Food Menu</h2>
 
-      <div className="menu__layout">
+      <div className="menu__grid">
         <div className="menu__media">
           <SmartImage
             src={IMAGES.menu.src}
             alt={IMAGES.menu.alt}
-            width={760}
-            height={480}
-            sizes="(max-width: 900px) 100vw, 40vw"
-            className="menu__img"
+            fill
+            sizes="(max-width: 768px) 100vw, 420px"
             fallbackLabel="Food"
           />
         </div>
@@ -30,7 +22,7 @@ export default function Menu() {
           {DEMO_MENU.map((category) => (
             <div className="menu__category" key={category.category}>
               <h3>{category.category}</h3>
-              <ul>
+              <ul className="menu__list">
                 {category.items.map((item) => (
                   <li key={item.name}>
                     <div className="menu__item">
@@ -47,8 +39,7 @@ export default function Menu() {
             </div>
           ))}
           <p className="menu__note">
-            Sample menu shown for demonstration — not the hotel&rsquo;s verified
-            menu.
+            Illustrative sample menu only — not the hotel&rsquo;s verified menu.
           </p>
         </div>
       </div>

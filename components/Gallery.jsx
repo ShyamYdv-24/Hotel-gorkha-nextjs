@@ -4,31 +4,25 @@ import { IMAGES } from "../data/images";
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="section gallery">
-      <div className="section-head">
-        <p className="eyebrow">Take a look</p>
-        <h2>Gallery</h2>
-        <p className="section-sub">
-          Illustrative images — not actual photographs of the hotel.
-        </p>
-      </div>
+    <section id="gallery">
+      <h2>Gallery</h2>
 
       <div className="gallery__grid">
         {DEMO_GALLERY.map((item) => {
           const image = IMAGES[item.imageKey];
           return (
-            <figure
-              className={`gallery__item gallery__item--${item.span}`}
-              key={item.imageKey}
-            >
-              <SmartImage
-                src={image.src}
-                alt={image.alt}
-                fill
-                sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
-                fallbackLabel="Photo unavailable"
-              />
-            </figure>
+            <div className="gallery__card" key={item.title}>
+              <div className="gallery__media">
+                <SmartImage
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 360px"
+                  fallbackLabel="Image"
+                />
+              </div>
+              <h3>{item.title}</h3>
+            </div>
           );
         })}
       </div>

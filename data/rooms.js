@@ -1,47 +1,39 @@
 /**
  * DEMO ROOM DATA — ILLUSTRATIVE ONLY
  * ---------------------------------------------------------------------------
- * The room names, descriptions, features and prices below are placeholders.
- * They are NOT verified hotel offerings. "Standard", "Deluxe" and "Family"
- * are retained only as illustrative demo categories.
- *
- * Replace these values with the hotel's real rooms and rates when available.
- * `imageKey` refers to a key in data/images.js.
+ * Room names and descriptions are restored from the original website
+ * (base commit d594781). The prices below are illustrative demo values and
+ * are NOT verified hotel rates. Replace them with real rooms and rates when
+ * available. `imageKey` refers to a key in data/images.js.
  */
 
 export const DEMO_ROOMS = [
   {
     slug: "standard",
     name: "Standard Room",
-    description:
-      "A simple, comfortable room for a restful night's stay.",
+    description: "A comfortable room for a relaxing stay.",
     priceLabel: "NPR 3,500",
     priceUnit: "per night",
     priceNote: "Demo price",
     imageKey: "roomStandard",
-    features: ["Comfortable bed", "Private bathroom", "Free Wi-Fi"],
   },
   {
     slug: "deluxe",
     name: "Deluxe Room",
-    description:
-      "A more spacious room with extra room to relax.",
+    description: "A spacious room designed for extra comfort.",
     priceLabel: "NPR 5,500",
     priceUnit: "per night",
     priceNote: "Demo price",
     imageKey: "roomDeluxe",
-    features: ["Extra space", "Seating area", "Private bathroom"],
   },
   {
     slug: "family",
     name: "Family Room",
-    description:
-      "A practical option for families and small groups.",
+    description: "A convenient room option for families and groups.",
     priceLabel: "NPR 7,500",
     priceUnit: "per night",
     priceNote: "Demo price",
     imageKey: "roomFamily",
-    features: ["Multiple beds", "Space for groups", "Private bathroom"],
   },
 ];
 

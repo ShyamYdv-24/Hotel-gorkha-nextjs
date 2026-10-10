@@ -1,15 +1,16 @@
 /**
  * DEMO GALLERY DATA — ILLUSTRATIVE ONLY
  * ---------------------------------------------------------------------------
- * `imageKey` refers to data/images.js. These are generic stock photos, not
- * actual photographs of Hotel Gorkha.
+ * Titles are restored from the original website (base commit d594781).
+ * `imageKey` refers to data/images.js. The images are illustrative stock
+ * photos, not actual photographs of Hotel Gorkha.
  */
 
 export const DEMO_GALLERY = [
-  { imageKey: "galleryExterior", span: "wide" },
-  { imageKey: "galleryLobby", span: "tall" },
-  { imageKey: "galleryDining", span: "normal" },
-  { imageKey: "galleryRoom", span: "normal" },
-  { imageKey: "galleryInterior", span: "wide" },
-  { imageKey: "galleryView", span: "normal" },
+  { title: "Hotel Exterior", imageKey: "galleryExterior" },
+  { title: "Hotel Room", imageKey: "galleryRoom" },
+  { title: "Dining Area", imageKey: "galleryDining" },
+  { title: "Hotel Interior", imageKey: "galleryInterior" },
+  { title: "Guest Area", imageKey: "galleryLobby" },
+  { title: "Hotel View", imageKey: "galleryView" },
 ];

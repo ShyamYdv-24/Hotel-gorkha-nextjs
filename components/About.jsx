@@ -1,39 +1,55 @@
 import SmartImage from "./SmartImage";
 import { IMAGES } from "../data/images";
 
+const FEATURES = [
+  "Comfortable Stay",
+  "Friendly Hospitality",
+  "Convenient Location",
+];
+
 export default function About() {
   return (
-    <section id="about" className="section about">
+    <section id="about">
       <div className="about__grid">
         <div className="about__media">
-          <SmartImage
-            src={IMAGES.about.src}
-            alt={IMAGES.about.alt}
-            width={800}
-            height={600}
-            sizes="(max-width: 900px) 100vw, 45vw"
-            className="about__img"
-            fallbackLabel="Hotel interior"
-          />
+          <div className="about__photo">
+            <SmartImage
+              src={IMAGES.about.src}
+              alt={IMAGES.about.alt}
+              fill
+              sizes="(max-width: 768px) 100vw, 420px"
+              fallbackLabel="HOTEL PHOTO"
+            />
+          </div>
+          <div className="about__caption">
+            <strong>HOTEL GORKHA</strong>
+            <span>Dharan, Nepal</span>
+          </div>
         </div>
+
         <div className="about__content">
-          <p className="eyebrow">About our hotel</p>
-          <h2>A comfortable stay, simply done</h2>
+          <p className="about__label">ABOUT OUR HOTEL</p>
+          <h2>About Hotel Gorkha</h2>
+          <h3>A Comfortable Stay in Dharan</h3>
           <p>
-            Hotel Gorkha is a welcoming place to stay, offering comfortable rooms
-            and straightforward, friendly hospitality.
+            Welcome to Hotel Gorkha, a welcoming place to stay in Dharan, Nepal.
           </p>
           <p>
-            Whether you are travelling for business or leisure, we aim to make
-            your stay easy and relaxing.
+            Enjoy a pleasant environment, comfortable accommodation, and
+            friendly hospitality during your stay.
           </p>
-          <ul className="about__points">
-            <li>Comfortable rooms</li>
-            <li>Friendly hospitality</li>
-            <li>Convenient location</li>
-          </ul>
-          <a className="btn btn-outline" href="#rooms">
-            Explore our rooms
+
+          <div className="about__features">
+            {FEATURES.map((feature) => (
+              <div className="about__feature" key={feature}>
+                <span aria-hidden="true">&check;</span>
+                <p>{feature}</p>
+              </div>
+            ))}
+          </div>
+
+          <a href="#rooms" className="about__button">
+            Explore Our Rooms
           </a>
         </div>
       </div>

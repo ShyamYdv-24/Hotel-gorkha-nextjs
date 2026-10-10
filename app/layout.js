@@ -1,24 +1,7 @@
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-display",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const siteDescription =
-  "Hotel Gorkha is a welcoming place to stay, offering comfortable rooms and simple, friendly hospitality. Request a room booking, browse the sample menu, and view the gallery.";
+  "Hotel Gorkha is a welcoming place to stay in Dharan, Nepal, offering comfortable accommodation and friendly hospitality. Explore our rooms, sample menu and gallery, or request a room booking.";
 
 export const metadata = {
   title: {
@@ -39,10 +22,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}`}
-    >
+    <html lang="en">
       <body>{children}</body>
     </html>
   );
