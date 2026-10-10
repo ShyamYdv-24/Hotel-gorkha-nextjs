@@ -11,6 +11,12 @@ const LINKS = [
   { href: "#contact", label: "Contact" },
 ];
 
+const CONTACT_DETAILS = [
+  "Dharan, Koshi Province, Nepal",
+  "Phone: +977-25-XXXXXX",
+  "Email: hotelgorkha@example.com",
+];
+
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -25,18 +31,27 @@ export default function Footer() {
         <h3>HOTEL GORKHA</h3>
       </div>
 
-      <p>Comfort, hospitality and a pleasant stay in Dharan.</p>
+      <p className="site-footer__intro">
+        Comfort, hospitality and a pleasant stay in Dharan.
+      </p>
 
-      <div className="site-footer__links">
+      <nav className="site-footer__links" aria-label="Footer">
         {LINKS.map((link) => (
           <a key={link.href} href={link.href}>
             {link.label}
           </a>
         ))}
-      </div>
+      </nav>
 
-      <p>&copy; {new Date().getFullYear()} Hotel Gorkha. All rights reserved.</p>
-      <p>Designed with Next.js</p>
+      <div className="site-footer__contact">
+        {CONTACT_DETAILS.map((detail) => (
+          <p key={detail}>{detail}</p>
+        ))}
+        <p className="site-footer__note">
+          Placeholder details carried over from the original site — not yet
+          verified. Please treat as examples only.
+        </p>
+      </div>
 
       <p className="site-footer__credit">
         Illustrative imagery via{" "}
@@ -50,6 +65,11 @@ export default function Footer() {
         ))}
         . Not actual photographs of the hotel.
       </p>
+
+      <div className="site-footer__bottom">
+        <p>&copy; {new Date().getFullYear()} Hotel Gorkha. All rights reserved.</p>
+        <p>Designed with Next.js</p>
+      </div>
     </footer>
   );
 }

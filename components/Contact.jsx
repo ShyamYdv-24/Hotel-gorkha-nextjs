@@ -1,3 +1,11 @@
+const MAP = {
+  embedSrc:
+    "https://maps.google.com/maps?q=26.8174062,87.27726&z=16&hl=en&output=embed",
+  directionsUrl:
+    "https://www.google.com/maps/dir/?api=1&destination=26.8174062,87.27726",
+  title: "Map showing the location of Hotel Gorkha in Dharan, Nepal",
+};
+
 export default function Contact() {
   return (
     <section id="contact">
@@ -17,9 +25,23 @@ export default function Contact() {
 
         <div className="contact__map">
           <h3>Find Us</h3>
-          <div className="contact__map-placeholder">
-            Map will be displayed here.
+          <div className="contact__map-frame">
+            <iframe
+              src={MAP.embedSrc}
+              title={MAP.title}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
+          <a
+            className="contact__map-directions"
+            href={MAP.directionsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Directions
+          </a>
         </div>
       </div>
     </section>
