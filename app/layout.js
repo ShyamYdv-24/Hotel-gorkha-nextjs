@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./footer.css";
 
 const siteDescription =
   "Hotel Gorkha is a welcoming place to stay in Dharan, Nepal, offering comfortable accommodation and friendly hospitality. Explore our rooms, sample menu and gallery, or request a room booking.";
