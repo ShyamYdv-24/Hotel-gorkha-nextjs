@@ -1,64 +1,41 @@
+import SmartImage from "./SmartImage";
+import { IMAGES } from "../data/images";
+
 export default function About() {
   return (
-    <section id="about">
-      <div className="about-container">
-
-        {/* Left: Hotel Image */}
-        <div className="about-image">
-          <div className="about-image-placeholder">
-            <span>HOTEL PHOTO</span>
-          </div>
-
-          <div className="about-image-caption">
-            <strong>HOTEL GORKHA</strong>
-            <span>Dharan, Nepal</span>
-          </div>
+    <section id="about" className="section about">
+      <div className="about__grid">
+        <div className="about__media">
+          <SmartImage
+            src={IMAGES.about.src}
+            alt={IMAGES.about.alt}
+            width={800}
+            height={600}
+            sizes="(max-width: 900px) 100vw, 45vw"
+            className="about__img"
+            fallbackLabel="Hotel interior"
+          />
         </div>
-
-        {/* Right: About Content */}
-        <div className="about-content">
-
-          <p className="about-label">ABOUT OUR HOTEL</p>
-
-          <h2>About Hotel Gorkha</h2>
-
-          <h3>A Comfortable Stay in Dharan</h3>
-
+        <div className="about__content">
+          <p className="eyebrow">About our hotel</p>
+          <h2>A comfortable stay, simply done</h2>
           <p>
-            Welcome to Hotel Gorkha, a welcoming place to stay
-            in Dharan, Nepal.
+            Hotel Gorkha is a welcoming place to stay, offering comfortable rooms
+            and straightforward, friendly hospitality.
           </p>
-
           <p>
-            Enjoy a pleasant environment, comfortable accommodation,
-            and friendly hospitality during your stay.
+            Whether you are travelling for business or leisure, we aim to make
+            your stay easy and relaxing.
           </p>
-
-          <div className="about-features">
-
-            <div className="about-feature">
-              <span>✓</span>
-              <p>Comfortable Stay</p>
-            </div>
-
-            <div className="about-feature">
-              <span>✓</span>
-              <p>Friendly Hospitality</p>
-            </div>
-
-            <div className="about-feature">
-              <span>✓</span>
-              <p>Convenient Location</p>
-            </div>
-
-          </div>
-
-          <a href="#rooms" className="about-button">
-            Explore Our Rooms
+          <ul className="about__points">
+            <li>Comfortable rooms</li>
+            <li>Friendly hospitality</li>
+            <li>Convenient location</li>
+          </ul>
+          <a className="btn btn-outline" href="#rooms">
+            Explore our rooms
           </a>
-
         </div>
-
       </div>
     </section>
   );

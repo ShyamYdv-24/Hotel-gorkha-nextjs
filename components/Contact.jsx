@@ -1,26 +1,17 @@
 export default function Contact() {
   return (
-    <section id="contact">
-      <h2>Location & Contact</h2>
+    <section id="contact" className="section contact">
+      <div className="section-head">
+        <p className="eyebrow">Get in touch</p>
+        <h2>Contact</h2>
+      </div>
 
-      <div className="contact-container">
-        <div className="contact-info">
-          <h3>Hotel Gorkha</h3>
-
-          <p>Dharan, Koshi Province, Nepal</p>
-
-          <p>Phone: +977-25-XXXXXX</p>
-
-          <p>Email: hotelgorkha@example.com</p>
-        </div>
-
-        <div className="contact-map">
-          <h3>Find Us</h3>
-
-          <div className="map-placeholder">
-            Map will be displayed here.
-          </div>
-        </div>
+      <div className="contact__card">
+        <p className="contact__notice">Contact details will be added soon.</p>
+        <p className="contact__sub">
+          Phone, email and address information have not been verified yet, so we
+          have not listed any. Please check back soon.
+        </p>
       </div>
     </section>
   );
